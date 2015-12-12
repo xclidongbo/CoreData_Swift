@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sPv-KM-GxT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Dog Walk-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test_CoreData_Chapter3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-8h-9n8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8i-gs-xl7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PKo-36-8IM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E8i-gs-xl7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="49I-17-gfr"/>
+                            <constraint firstAttribute="trailing" secondItem="LPN-8h-9n8" secondAttribute="trailing" id="CHM-E0-T26"/>
+                            <constraint firstItem="LPN-8h-9n8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="M0K-bU-ckf"/>
+                            <constraint firstItem="LPN-8h-9n8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ptt-oY-RxA"/>
+                            <constraint firstItem="E8i-gs-xl7" firstAttribute="top" secondItem="LPN-8h-9n8" secondAttribute="bottom" id="V9z-kA-CL5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E8i-gs-xl7" secondAttribute="bottom" id="cji-cF-frK"/>
+                            <constraint firstAttribute="trailing" secondItem="E8i-gs-xl7" secondAttribute="trailing" id="qWv-FG-nKd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LPN-8h-9n8"/>
+                                <exclude reference="E8i-gs-xl7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CHM-E0-T26"/>
+                                <exclude reference="M0K-bU-ckf"/>
+                                <exclude reference="Ptt-oY-RxA"/>
+                                <exclude reference="49I-17-gfr"/>
+                                <exclude reference="V9z-kA-CL5"/>
+                                <exclude reference="qWv-FG-nKd"/>
+                                <exclude reference="cji-cF-frK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LPN-8h-9n8"/>
+                                <include reference="E8i-gs-xl7"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CHM-E0-T26"/>
+                                <include reference="M0K-bU-ckf"/>
+                                <include reference="Ptt-oY-RxA"/>
+                                <include reference="49I-17-gfr"/>
+                                <include reference="V9z-kA-CL5"/>
+                                <include reference="qWv-FG-nKd"/>
+                                <include reference="cji-cF-frK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dog Walk" id="U6z-c6-vo5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hE9-Js-Dk8">
+                            <connections>
+                                <action selector="add:" destination="BYZ-38-t0r" id="2RV-5Y-1J8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="E8i-gs-xl7" id="frq-wc-zIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162.5" y="319.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QH7-zv-PKY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sPv-KM-GxT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qO5-I5-pmO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T9x-7b-Vv3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIq-wz-Bim" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.5" y="319.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="400" height="267"/>
+    </resources>
+</document>
